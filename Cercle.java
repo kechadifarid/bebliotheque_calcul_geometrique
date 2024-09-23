@@ -1,28 +1,29 @@
-public class Cercle {
-    private double rayon;
+public class Circle {
+    private double radius;
+    private Point orgin;
 
-    public Cercle(double rayon) {
-        this.rayon = rayon;
+    public Circle(double rayon, Point origin) {
+        this.radius = rayon;
+        this.orgin = origin;
     }
 
-    public double calculerPerimetre() {
-        return 2 * Math.PI * rayon;
+    public double calculatePerimeter() {
+        return 2 * Math.PI * radius;
     }
 
-    public double calculerAire() {
-        return Math.PI * Math.pow(rayon, 2);
+    public double calculateArea() {
+        return Math.PI * Math.pow(radius, 2);
     }
 
-    public double obtenirDiametre() {
-        return 2 * rayon;
+    public double getDiameter() {
+        return 2 * radius;
     }
 
-    public double getRayon() {
-        return rayon;
+    public double getRadius() {
+        return radius;
     }
 
-    public void setRayon(double rayon) {
-        this.rayon = rayon;
+    public void setRadius(double radius) {
+        this.radius = radius;
     }
-
 }
