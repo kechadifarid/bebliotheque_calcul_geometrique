@@ -1,9 +1,9 @@
 package Calculer_Distance;
 
-public class Droite {
+public class Line {
 	private double a, b;
 
-	public Droite(double a, double b) {
+	public Line(double a, double b) {
 		super();
 		this.a = a;
 		this.b = b;
@@ -25,7 +25,7 @@ public class Droite {
 		this.b = b;
 	}
 
-	public boolean appertientALaDroite(Point p) {
+	public boolean belongsToTheLine(Point p) {
 		if(p.getY()==a*p.getX()+b)
 		return true;
 		else 
