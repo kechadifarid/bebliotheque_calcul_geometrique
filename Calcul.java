@@ -37,7 +37,14 @@ public class Calcul {
 
 	}
 
-	// Méthode pour calculer la distance entre un point et un segment de ligne
+	 /**
+     * Calculates the shortest distance from a point to a line segment.
+     *
+     * @param p     The point from which the distance is calculated.
+     * @param start The starting point of the segment.
+     * @param end   The ending point of the segment.
+     * @return The shortest distance from the point to the segment.
+     */
 	public static double distanceFromPointToSegment(Point p, Point start, Point end) {
 		double ABx = end.getX() - start.getX();
 		double ABy = end.getY() - start.getY();
@@ -50,37 +57,37 @@ public class Calcul {
 		double t = produitScalaire / longueurABCarre;
 
 		if (t < 0) {
-			// Projection avant le début du segment (start), distance entre P et start
 			return distanceFromPointToPoint(p, start);
 		} else if (t > 1) {
-			// Projection après la fin du segment (end), distance entre P et end
 			return distanceFromPointToPoint(p, end);
 		} else {
-			// Projection sur le segment
 			double x_proj = start.getX() + t * ABx;
 			double y_proj = start.getY() + t * ABy;
 			return distanceFromPointToPoint(p, new Point(x_proj, y_proj));
 		}
 	}
-
-	// Méthode pour calculer la distance entre un point et un carré
+	  /**
+     * Calculates the shortest distance from a point to a square.
+     * This method calculates the distance between the point and each side of the square,
+     * then returns the smallest distance.
+     *
+     * @param p      The point from which the distance is calculated.
+     * @param square The square to which the distance is calculated.
+     * @return The shortest distance from the point to the square.
+     */
 	public static double distanceFromPointToSquare(Point p, Square square) {
-		// Les points du carré doivent être calculés
 		square.getPoints();
 
-		// Récupérer les sommets du carré
 		Point A = square.getA();
 		Point B = square.getB();
 		Point C = square.getC();
 		Point D = square.getD();
 
-		// Calculer la distance entre le point et chaque segment du carré
 		double distAB = distanceFromPointToSegment(p, A, B);
 		double distBC = distanceFromPointToSegment(p, B, C);
 		double distCD = distanceFromPointToSegment(p, C, D);
 		double distDA = distanceFromPointToSegment(p, D, A);
 
-		// Retourner la distance la plus courte
 		return Math.min(Math.min(distAB, distBC), Math.min(distCD, distDA));
 	}
 
