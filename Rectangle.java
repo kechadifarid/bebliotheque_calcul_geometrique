@@ -5,10 +5,43 @@ import java.io.IOException;
 public class Rectangle {
     private double lenght;
     private double width;
-    private Point upper_left;
-    private Point upper_right;
-    private Point bottom_left;
-    private Point bottom_right;
+
+    public Point getUpper_left() {
+        return upper_left;
+    }
+
+    public void setUpper_left(Point upper_left) {
+        this.upper_left = upper_left;
+    }
+
+    public Point getUpper_right() {
+        return upper_right;
+    }
+
+    public void setUpper_right(Point upper_right) {
+        this.upper_right = upper_right;
+    }
+
+    public Point getBottom_left() {
+        return bottom_left;
+    }
+
+    public void setBottom_left(Point bottom_left) {
+        this.bottom_left = bottom_left;
+    }
+
+    public Point getBottom_right() {
+        return bottom_right;
+    }
+
+    public void setBottom_right(Point bottom_right) {
+        this.bottom_right = bottom_right;
+    }
+
+    public Point upper_left;
+    public Point upper_right;
+    public Point bottom_left;
+    public Point bottom_right;
 
     private double x;
     private double y;
