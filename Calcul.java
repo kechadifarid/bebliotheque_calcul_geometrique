@@ -2,12 +2,27 @@
 package Calculer_Distance;
 
 public class Calcul {
+
+	/**
+	 * Calculates the shortest distance from a point to a line segment.
+	 *
+	 * @param p1     The point from which the distance is calculated.
+	 * @param p2   The ending point from which the distance is calculated.
+	 * @return The distance between the two points
+	 */
 	public static double distanceFromPointToPoint(Point p1, Point p2) {
 		double distance;
 		distance = Math.sqrt(Math.pow(p1.getX() - p2.getX(), 2) + Math.pow(p1.getY() - p2.getY(), 2));
 		return distance;
 	}
 
+	/**
+	 * Calculates the shortest distance from a point to a line segment.
+	 *
+	 * @param p     The point from which the distance is calculated.
+	 * @param l   The line from which we will calculate the distance
+	 * @return The shortest distance between the point and the line
+	 */
 	public static double distanceFromPointToLine(Point p, Line l) {
 		double distance;
 		if (l.belongsToTheLine(p)) {
@@ -17,6 +32,13 @@ public class Calcul {
 		return distance;
 	}
 
+	/**
+	 * Calculates the shortest distance from a point to a line segment.
+	 *
+	 * @param l1     The line  from which the distance is calculated.
+	 * @param l2   The line from which we will calculate the distance
+	 * @return The shortest distance between both lines.
+	 */
 	public static double distanceFromLineToLine(Line l1, Line l2) {
 		double distance;
 		if (l1.getA() != l2.getA()) {
@@ -27,6 +49,13 @@ public class Calcul {
 		return distance;
 	}
 
+	/**
+	 * Calculates the shortest distance from a point to a line segment.
+	 *
+	 * @param  p   The point from which the distance is calculated.
+	 * @param c   The circle from which we will calculate the distance
+	 * @return The shortest distance between the circle and the point. (from the CIRCLE, not from its center)
+	 */
 	public static double distanceFromPointToCercle(Point p, Circle c) {
 		double distance;
 		if (c.getRadius() <= Calcul.distanceFromPointToPoint(p, c.getOrgin())) {
