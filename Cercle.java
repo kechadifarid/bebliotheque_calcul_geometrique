@@ -1,29 +1,31 @@
-public class Circle {
-    private double radius;
-    private Point orgin;
+package Calculer_distance;
 
-    public Circle(double rayon, Point origin) {
-        this.radius = rayon;
-        this.orgin = origin;
-    }
+public class Cercle {
 
-    public double calculatePerimeter() {
-        return 2 * Math.PI * radius;
-    }
+	 private double rayon;
 
-    public double calculateArea() {
-        return Math.PI * Math.pow(radius, 2);
-    }
+	    public Cercle(double rayon) {
+	        this.rayon = rayon;
+	    }
 
-    public double getDiameter() {
-        return 2 * radius;
-    }
+	    public double calculerPerimetre() {
+	        return 2 * Math.PI * rayon;
+	    }
 
-    public double getRadius() {
-        return radius;
-    }
+	    public double calculerAire() {
+	        return Math.PI * Math.pow(rayon, 2);
+	    }
 
-    public void setRadius(double radius) {
-        this.radius = radius;
-    }
+	    public double obtenirDiametre() {
+	        return 2 * rayon;
+	    }
+
+	    public double getRayon() {
+	        return rayon;
+	    }
+
+	    public void setRayon(double rayon) {
+	        this.rayon = rayon;
+	    }
+
 }

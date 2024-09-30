@@ -1,6 +1,7 @@
-package Calculer_Distance;
+package Calculer_distance;
 
 public class Line {
+
 	private double a, b;
 
 	public Line(double a, double b) {

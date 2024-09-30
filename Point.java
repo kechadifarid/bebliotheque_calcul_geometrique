@@ -1,6 +1,7 @@
-package Calculer_Distance;
+package Calculer_distance;
 
 public class Point {
+
 	private double x, y;
 
 	public Point(double x, double y) {
@@ -24,5 +25,4 @@ public class Point {
 	public void setY(double y) {
 		this.y = y;
 	}
-
 }
