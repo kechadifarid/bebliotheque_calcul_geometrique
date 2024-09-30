@@ -25,7 +25,7 @@ public class Line {
 		this.b = b;
 	}
 
-	public boolean appertientALaDroite(Point p) {
+	public boolean belongsToTheLine(Point p) {
 		if(p.getY()==a*p.getX()+b)
 		return true;
 		else 
