@@ -74,4 +74,37 @@ public class Carre {
         );
 
    ; }
+
+    public static double distanceCarreCercle(Carre carre, Cercle cercle) {
+        Point origineCercle = cercle.getOrigin();
+        double rayonCercle = cercle.getRadius();
+        Point A = carre.getA();
+        Point B = carre.getB();
+        Point C = carre.getC();
+        Point D = carre.getD();
+
+        double xCercle = origineCercle.getX();
+        double yCercle = origineCercle.getY();
+
+        double xClosest = clamp(xCercle, A.getX(), B.getX());
+        double yClosest = clamp(yCercle, A.getY(), D.getY());
+
+        double distanceCentreToClosest = distance(origineCercle, new Point(xClosest, yClosest));
+        double distanceSurfaceToSurface = distanceCentreToClosest - rayonCercle;
+
+        return Math.max(0, distanceSurfaceToSurface);
+    }
+    // Méthode auxiliaire pour restreindre une valeur entre un minimum et un maximum
+    private static double clamp(double value, double min, double max) {
+        return Math.max(min, Math.min(value, max));
+    }
+
+    // Méthode pour calculer la distance entre deux points
+    private static double distance(Point p1, Point p2) {
+        double deltaX = p1.getX() - p2.getX();
+        double deltaY = p1.getY() - p2.getY();
+        return Math.sqrt(deltaX * deltaX + deltaY * deltaY);
+    }
+
+
 }

@@ -1,8 +1,12 @@
-public class Circle {
+package Calculer_Distance;
+
+import Calculer_Distance.Point;
+
+public class Cercle {
     private double radius;
     private Point orgin;
 
-    public Circle(double rayon, Point origin) {
+    public Cercle(double rayon, Point origin) {
         this.radius = rayon;
         this.orgin = origin;
     }
@@ -25,5 +29,9 @@ public class Circle {
 
     public void setRadius(double radius) {
         this.radius = radius;
+    }
+
+    public Point getOrigin() {
+        return this.orgin;
     }
 }
