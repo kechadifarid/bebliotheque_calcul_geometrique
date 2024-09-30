@@ -1,3 +1,5 @@
+package Calculer_Distance;
+
 public class Circle {
     private double radius;
     private Point orgin;
@@ -26,4 +28,12 @@ public class Circle {
     public void setRadius(double radius) {
         this.radius = radius;
     }
+
+	public Point getOrgin() {
+		return orgin;
+	}
+
+	public void setOrgin(Point orgin) {
+		this.orgin = orgin;
+	}
 }
