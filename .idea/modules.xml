@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/bibliotheque_calcul_geometrique.iml" filepath="$PROJECT_DIR$/bibliotheque_calcul_geometrique.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bebliotheque_calcul_geometrique.iml" filepath="$PROJECT_DIR$/bebliotheque_calcul_geometrique.iml" />
     </modules>
   </component>
 </project>
