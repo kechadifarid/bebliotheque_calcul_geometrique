@@ -1,4 +1,4 @@
-package Calculer_Distance;
+package Calcul_Distance;
 
 public class Calcul {
 	public static double distanceFromPointToPoint(Point p1, Point p2) {

@@ -1,4 +1,4 @@
-package Calculer_Distance;
+package Calcul_Distance;
 
 public class NoCoordException extends RuntimeException {
     public NoCoordException(String message) {

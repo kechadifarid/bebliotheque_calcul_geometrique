@@ -1,4 +1,4 @@
-package Calculer_Distance;
+package Calcul_Distance;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -22,6 +22,7 @@ public  class Rectangle {
     private Segment right;
 
 
+
     public Rectangle(){
         this.upper_right = new Point();
         this.bottom_right = new Point();
@@ -34,7 +35,7 @@ public  class Rectangle {
         return lenght;
     }
 
-    void calculPointToRectangle(Line l){
+    public void calculPointToRectangle(Line l){
         System.out.println(Math.abs(l.getA() * upper_left.getX() - upper_left.getY() + l.getB()) / Math.sqrt(l.getA() *l.getA() +1));
         System.out.println("-----------------------------");
         System.out.println(Math.abs(l.getA() * upper_right.getX() - upper_right.getY() + l.getB()) / Math.sqrt(l.getA() *l.getA() +1));
@@ -45,7 +46,7 @@ public  class Rectangle {
         System.out.println("-----------------------------");
     }
 
-    boolean  calculDist(Line l, Segment segment) {
+    public boolean calculDist(Line l, Segment segment) {
         System.out.println("Vérification du segment: " + segment.toString());
         System.out.println("Équation de la ligne: y = " + l.getA() + "x + " + l.getB());
 
@@ -151,7 +152,7 @@ public  class Rectangle {
         this.x = x;
         upper_left.setX(x);
     }
-    private void setDist(double dist) {
+    public void setDist(double dist) {
         this.dist=dist;
     }
 
@@ -159,25 +160,23 @@ public  class Rectangle {
         this.y = y;
         upper_left.setY(y);
     }
-     public static void main(String[] args) {
-         Line l1 = new Line(0, 2);
-         Rectangle r1 = new Rectangle();
-         r1.setX(2);
-         r1.setY(2);
-         r1.setData(2, 2);
-         System.out.println("rectangle coordinates:");
+    public static void main(String[] args) {
+        Line l1 = new Line(0, 2);
+        Rectangle r1 = new Rectangle();
+        r1.setX(2);
+        r1.setY(2);
+        r1.setData(2, 2);
+         /*System.out.println("rectangle coordinates:");
          System.out.println("Top left corner: " + r1.getUpper_left().toString());
          System.out.println("Top right corner: " + r1.getUpper_right().toString());
          System.out.println("Bot left corner: " + r1.getBottom_left().toString());
          System.out.println("Bot right corner: " + r1.getBottom_right().toString());
-         System.out.println("--------------------");
-         r1.calculPointToRectangle(l1);
-         for (Segment segment : r1.getSegments()) {
+         System.out.println("---------------------------");*/
+        r1.calculPointToRectangle(l1);
+        for (Segment segment : r1.getSegments()) {
             if(r1.calculDist(l1, segment)){
                 r1.setDist(0);
             }
-
-
-         }
-     }
+        }
+    }
 }

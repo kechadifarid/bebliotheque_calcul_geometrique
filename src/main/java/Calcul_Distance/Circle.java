@@ -1,4 +1,4 @@
-package Calculer_Distance;
+package Calcul_Distance;
 
 public class Circle {
     private double radius;
@@ -37,3 +37,4 @@ public class Circle {
 		this.orgin = orgin;
 	}
 }
+
