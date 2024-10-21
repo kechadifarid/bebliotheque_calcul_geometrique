@@ -1,6 +1,6 @@
 package Calculer_Distance;
 
-public class Rectangle {
+public class Rectangle extends Polygon {
     private double lenght;
     private double width;
 

@@ -218,31 +218,25 @@ public class Calcul {
 		return Math.sqrt(deltaX * deltaX + deltaY * deltaY);
 	}
 	public static double distancePolygonCircle(Polygon polygon, Circle circle) {
-		// Récupérer les points du polygone
-		List<Point> vertices = polygon.getVertices();
 		Point circleCenter = circle.getOrgin();
 		double circleRadius = circle.getRadius();
 
-		// Initialiser la distance minimale avec un très grand nombre
+		// Start by assuming the distance is infinite
 		double minDistance = Double.MAX_VALUE;
 
-		// Parcourir tous les segments du polygone
-		for (int i = 0; i < vertices.size(); i++) {
-			// Obtenir le point de départ et de fin de chaque segment
-			Point start = vertices.get(i);
-			Point end = vertices.get((i + 1) % vertices.size()); // Utilisation du modulo pour boucler
+		// Iterate through all the edges of the polygon
+		for (int i = 0; i < polygon.getNumberOfPoints(); i++) {
+			Point start = polygon.getVertices().get(i);
+			Point end = polygon.getVertices().get((i + 1) % polygon.getNumberOfPoints());
 
-			// Calculer la distance entre le centre du cercle et le segment du polygone
-			double distanceToSegment = distanceFromPointToSegment(circleCenter, start, end);
+			// Calculate the distance between the circle and the polygon edge (segment)
+			double distanceFromSegmentToCircle = distancePointToSegment(circleCenter, start, end) - circleRadius;
 
-			// Trouver la distance entre la surface du cercle et le segment
-			double distanceToSurface = distanceToSegment - circleRadius;
-
-			// Mettre à jour la distance minimale
-			minDistance = Math.min(minDistance, distanceToSurface);
+			// Keep track of the smallest distance found
+			minDistance = Math.min(minDistance, distanceFromSegmentToCircle);
 		}
 
-		// Si le cercle touche ou chevauche le polygone, la distance est 0
+		// Return the max of 0 or the minimum distance (since distance can't be negative)
 		return Math.max(0, minDistance);
 	}
 
