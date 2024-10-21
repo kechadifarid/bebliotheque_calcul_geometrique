@@ -1,6 +1,8 @@
 
 package Calculer_Distance;
 
+import java.util.ArrayList;
+
 public class Calcul {
 	public static double distanceFromPointToPoint(Point p1, Point p2) {
 		double distance;
@@ -89,6 +91,31 @@ public class Calcul {
 		double distDA = distanceFromPointToSegment(p, D, A);
 
 		return Math.min(Math.min(distAB, distBC), Math.min(distCD, distDA));
+	}
+	// Nouvelle méthode pour calculer la distance entre une droite et un polygone
+	public static double distanceFromLineToPolygon(Line line, Polygon polygon) {
+		ArrayList<Point> points = polygon.getPoints();
+		double minDistance = Double.MAX_VALUE;
+
+		// Parcourir chaque côté du polygone
+		for (int i = 0; i < points.size(); i++) {
+			Point start = points.get(i);
+			Point end = points.get((i + 1) % points.size()); // Côté suivant (ferme le polygone)
+
+			// Calculer la distance entre la droite et le segment (côté du polygone)
+			double distanceStart = distanceFromPointToLine(start, line);
+			double distanceEnd = distanceFromPointToLine(end, line);
+
+			// Calculer la distance entre le segment et la droite
+			double segmentDistance = Math.min(distanceStart, distanceEnd);
+
+			// Mettre à jour la distance minimale
+			if (segmentDistance < minDistance) {
+				minDistance = segmentDistance;
+			}
+		}
+
+		return minDistance;
 	}
 
 }

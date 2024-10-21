@@ -3,7 +3,7 @@ package Calculer_Distance;
 public class Test {
 
 	public static void main(String[] args) {
-		Point p1 = new Point(2, 1);
+		/*Point p1 = new Point(2, 1);
 		Point p2 = new Point(3, 1);
 		Line l1 = new Line(3, -4);
 		Line l2 = new Line(3, 5);
@@ -31,6 +31,22 @@ public class Test {
 
 	        // Affichage de la distance
 	        System.out.println("Distance entre le point et le carré : " + distance5);
-	    }
+*/
+		Point p1 = new Point(0, 0);
+		Point p2 = new Point(5, 5);
+		Line line = new Line(3, 27); // Droite : x - y = 0 (x = y)
+
+		Polygon polygon = new Polygon();
+		polygon.addPoint(new Point(0, 0));
+		polygon.addPoint(new Point(4, 0));
+		polygon.addPoint(new Point(4, 3));
+		polygon.addPoint(new Point(0, 3));
+
+		double distance = Calcul.distanceFromLineToPolygon(line, polygon);
+		System.out.println("Distance minimale entre la droite et le polygone : " + distance);
+
+	}
+
+
 	}
 
