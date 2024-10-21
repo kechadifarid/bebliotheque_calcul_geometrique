@@ -2,17 +2,17 @@ package Calcul_Distance;
 
 import java.util.ArrayList;
 
-class Polygon {
-    private ArrayList<Point> points;
+class Polygon extends ArrayList<Point> {
+   // private ArrayList<Point> points;
 
     // Constructeur pour initialiser un polygone vide
     public Polygon() {
-        points = new ArrayList<Point>();
+        //points = new ArrayList<Point>();
     }
 
     // Constructeur pour créer un polygone régulier avec un nombre de côtés
     public Polygon(int numberOfSides, double radius, Point center) {
-        points = new ArrayList<Point>();
+        //points = new ArrayList<Point>();
 
         // Générer les points du polygone régulier
         for (int i = 0; i < numberOfSides; i++) {
@@ -22,31 +22,28 @@ class Polygon {
             double x = center.getX() + radius * Math.cos(angle);
             double y = center.getY() + radius * Math.sin(angle);
             // Ajouter le point au polygone
-            points.add(new Point(x, y));
+            this.add(new Point(x, y));
         }
     }
 
     // Méthode pour ajouter un point (sommet) au polygone
-    public void addPoint(Point p) {
-        points.add(p);
-    }
 
     // Méthode pour obtenir le nombre de sommets du polygone
     public int getNumberOfPoints() {
-        return points.size();
+        return this.size();
     }
 
     // Méthode pour calculer la longueur de chaque côté du polygone
     public ArrayList<Double> getSideLengths() {
         ArrayList<Double> sideLengths = new ArrayList<>();
 
-        if (points.size() < 2) {
+        if (this.size() < 2) {
             return sideLengths; // Pas assez de points pour calculer des côtés
         }
 
-        for (int i = 0; i < points.size(); i++) {
-            Point p1 = points.get(i);
-            Point p2 = points.get((i + 1) % points.size()); // Boucle avec le premier point
+        for (int i = 0; i < this.size(); i++) {
+            Point p1 = this.get(i);
+            Point p2 = this.get((i + 1) % this.size()); // Boucle avec le premier point
             double distance = Calcul.distanceFromPointToPoint(p1, p2);
             sideLengths.add(distance);
         }
@@ -54,7 +51,7 @@ class Polygon {
         return sideLengths;
     }
     public ArrayList<Point> getPoints() {
-        return points;
+        return this;
     }
 
 }

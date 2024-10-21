@@ -3,7 +3,7 @@ package Calcul_Distance;
 import java.util.ArrayList;
 import java.util.List;
 
-public  class Rectangle {
+public  class Rectangle extends Polygon {
     private double lenght;
     private double width;
     private Point upper_left;
@@ -25,11 +25,19 @@ public  class Rectangle {
 
     public Rectangle(){
         this.upper_right = new Point();
+        this.add(upper_left);
         this.bottom_right = new Point();
+        this.add(bottom_right);
         this.upper_left = new Point();
+        this.add(upper_left);
         this.bottom_left = new Point();
+        this.add(bottom_left);
         segments = new ArrayList<>();
     }
+
+
+
+
 
     public double getLenght() {
         return lenght;
@@ -89,6 +97,13 @@ public  class Rectangle {
 
     public double getY() {
         return y;
+    }
+
+    @Override
+    public boolean add(Point point) throws NoCoordException {
+
+        if(super.size() ==4) throw new NoCoordException("Limite de points atteint");
+        return super.add(point);
     }
 
     public void setData(double lenght, double width) throws NoCoordException {
@@ -161,22 +176,68 @@ public  class Rectangle {
         upper_left.setY(y);
     }
     public static void main(String[] args) {
-        Line l1 = new Line(0, 2);
+
+        /*
+        Point p1 = new Point(2, 1);
+		Point p2 = new Point(3, 1);
+		Line l1 = new Line(3, -4);
+		Line l2 = new Line(3, 5);
+		Circle c1 = new Circle(3, p1);
+		Circle c2 = new Circle(4, p2);
+
+		double distance = Calcul.distanceFromPointToPoint(p1, p2);
+		System.out.println("la distance entre p1 et p2 est : " + distance);
+		double distance2 = Calcul.distanceFromPointToLine(p1, l1);
+		System.out.println("la distance entre l1 et p1 est : " + distance2);
+		double distance3 = Calcul.distanceFromLineToLine(l2, l1);
+		System.out.println("la distance entre l1 et l2 est : " + distance3);
+		double distance4 = Calcul.distanceFromPointToCercle(p2, c1);
+		System.out.println("la distance entre c1 et p2 est : " + distance4);
+
+		 Point A = new Point(1, 1);
+	        double length = 4.0;
+	        Square square = new Square(A, length);
+
+	        // Point pour lequel on veut calculer la distance
+	        Point point = new Point(0, 0);
+
+	        // Calcul de la distance
+	        double distance5 = Calcul.distanceFromPointToSquare(point, square);
+
+	        // Affichage de la distance
+	        System.out.println("Distance entre le point et le carré : " + distance5);
+*/
+        Point p1 = new Point(0, 0);
+        Point p2 = new Point(5, 5);
+        Line line = new Line(3, 27); // Droite : x - y = 0 (x = y)
+        Rectangle r1 = new Rectangle();
+        r1.add(new Point(0,0));
+        r1.setData(4,2);
+        Polygon polygon = new Polygon();
+        polygon.add(new Point(0, 0));
+        polygon.add(new Point(4, 0));
+        polygon.add(new Point(4, 3));
+        polygon.add(new Point(0, 3));
+
+        double distance = Calcul.distanceFromLineToPolygon(line, polygon);
+        System.out.println("Distance minimale entre la droite et le polygone : " + distance);
+
+        /*Line l1 = new Line(0, 2);
         Rectangle r1 = new Rectangle();
         r1.setX(2);
         r1.setY(2);
         r1.setData(2, 2);
-         /*System.out.println("rectangle coordinates:");
+         System.out.println("rectangle coordinates:");
          System.out.println("Top left corner: " + r1.getUpper_left().toString());
          System.out.println("Top right corner: " + r1.getUpper_right().toString());
          System.out.println("Bot left corner: " + r1.getBottom_left().toString());
          System.out.println("Bot right corner: " + r1.getBottom_right().toString());
-         System.out.println("---------------------------");*/
+         System.out.println("---------------------------");
         r1.calculPointToRectangle(l1);
         for (Segment segment : r1.getSegments()) {
             if(r1.calculDist(l1, segment)){
                 r1.setDist(0);
             }
-        }
+        }*/
     }
 }
