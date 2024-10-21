@@ -1,6 +1,8 @@
 
 package Calculer_Distance;
 
+import java.util.List;
+
 public class Calcul {
 
 	/**
@@ -215,6 +217,29 @@ public class Calcul {
 		double deltaY = p1.getY() - p2.getY();
 		return Math.sqrt(deltaX * deltaX + deltaY * deltaY);
 	}
+	public static double distancePolygonCircle(Polygon polygon, Circle circle) {
+		Point circleCenter = circle.getOrgin();
+		double circleRadius = circle.getRadius();
+
+		// Start by assuming the distance is infinite
+		double minDistance = Double.MAX_VALUE;
+
+		// Iterate through all the edges of the polygon
+		for (int i = 0; i < polygon.getNumberOfPoints(); i++) {
+			Point start = polygon.getVertices().get(i);
+			Point end = polygon.getVertices().get((i + 1) % polygon.getNumberOfPoints());
+
+			// Calculate the distance between the circle and the polygon edge (segment)
+			double distanceFromSegmentToCircle = distancePointToSegment(circleCenter, start, end) - circleRadius;
+
+			// Keep track of the smallest distance found
+			minDistance = Math.min(minDistance, distanceFromSegmentToCircle);
+		}
+
+		// Return the max of 0 or the minimum distance (since distance can't be negative)
+		return Math.max(0, minDistance);
+	}
+
 
 
 

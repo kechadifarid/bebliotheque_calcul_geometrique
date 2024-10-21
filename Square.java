@@ -1,5 +1,5 @@
 package Calculer_Distance;
-public class Square {
+public class Square extends Polygon{
     public Square(Point A , double distance) {
         this.A = A;
         this.length = distance;
