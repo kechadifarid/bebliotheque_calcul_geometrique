@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="bebliotheque_calcul_geometrique:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/bebliotheque_calcul_geometrique_jar</output-path>
+    <root id="archive" name="bebliotheque_calcul_geometrique.jar">
+      <element id="module-output" name="bebliotheque_calcul_geometrique" />
+    </root>
+  </artifact>
+</component>
