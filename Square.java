@@ -1,4 +1,7 @@
 package Calculer_Distance;
+
+import java.util.ArrayList;
+
 public class Square extends Polygon{
     public Square(Point A , double distance) {
         this.A = A;
@@ -47,7 +50,9 @@ public class Square extends Polygon{
     public void setLength(double length) {
         this.length = length;
     }
-    public void getPoints()
+
+    @Override
+    public ArrayList<Point> getPoints()
     {
 
         //Point B
@@ -72,5 +77,7 @@ public class Square extends Polygon{
 
         );
 
-   ; }
+        return super.getPoints();
+
+    }
 }

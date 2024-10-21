@@ -4,11 +4,35 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ba13390a-3477-4eef-9230-061ae1d3c29e" name="Changes" comment="distance entre cercle et polygone">
+    <list default="true" id="ba13390a-3477-4eef-9230-061ae1d3c29e" name="Changes" comment="Bon bon bon">
+      <change afterPath="$PROJECT_DIR$/Distance.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PolygonDistanceCalculator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Calcul.java" beforeDir="false" afterPath="$PROJECT_DIR$/Calcul.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Circle.java" beforeDir="false" afterPath="$PROJECT_DIR$/Circle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rectangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/Rectangle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Polygon.java" beforeDir="false" afterPath="$PROJECT_DIR$/Polygon.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Square.java" beforeDir="false" afterPath="$PROJECT_DIR$/Square.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/bebliotheque_calcul_geometrique_jar/bebliotheque_calcul_geometrique.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bebliotheque_calcul_geometrique/Calculer_Distance/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bebliotheque_calcul_geometrique/Calculer_Distance/.idea/artifacts/bebliotheque_calcul_geometrique_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bebliotheque_calcul_geometrique/Calculer_Distance/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bebliotheque_calcul_geometrique/Calculer_Distance/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bebliotheque_calcul_geometrique/Calculer_Distance/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bebliotheque_calcul_geometrique/Calculer_Distance/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bebliotheque_calcul_geometrique/Calculer_Distance/Calcul.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bebliotheque_calcul_geometrique/Calculer_Distance/Circle.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bebliotheque_calcul_geometrique/Calculer_Distance/Distance.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bebliotheque_calcul_geometrique/Calculer_Distance/Line.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bebliotheque_calcul_geometrique/Calculer_Distance/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bebliotheque_calcul_geometrique/Calculer_Distance/NoCoordException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bebliotheque_calcul_geometrique/Calculer_Distance/Point.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bebliotheque_calcul_geometrique/Calculer_Distance/Polygon.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bebliotheque_calcul_geometrique/Calculer_Distance/Rectangle.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bebliotheque_calcul_geometrique/Calculer_Distance/Segment.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bebliotheque_calcul_geometrique/Calculer_Distance/Square.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bebliotheque_calcul_geometrique/Calculer_Distance/Test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/bebliotheque_calcul_geometrique/Calculer_Distance/bebliotheque_calcul_geometrique.iml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,15 +76,35 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Main.executor": "Run",
-    "Application.Test.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "Master__DontPush",
-    "kotlin-language-version-configured": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Test.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Master__DontPush&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
+  <component name="RunManager">
+    <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Calculer_Distance.Test" />
+      <module name="bebliotheque_calcul_geometrique" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Calculer_Distance.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Test" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -103,6 +147,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="distance entre cercle et carre" />
     <MESSAGE value="distance entre cercle et polygone" />
-    <option name="LAST_COMMIT_MESSAGE" value="distance entre cercle et polygone" />
+    <MESSAGE value="Bon bon bon" />
+    <option name="LAST_COMMIT_MESSAGE" value="Bon bon bon" />
   </component>
 </project>
