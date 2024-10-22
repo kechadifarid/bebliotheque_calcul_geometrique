@@ -1,4 +1,4 @@
-package Calculer_distance;
+package Calculer_Distance;
 
 public class Carre {
     public Carre(Point A , double distance) {
