@@ -1,4 +1,4 @@
-package Calculer_Distance;
+package bibliotheque;
 
 public class Point {
 	private double x, y;

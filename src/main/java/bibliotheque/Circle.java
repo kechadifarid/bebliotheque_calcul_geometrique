@@ -1,6 +1,6 @@
-package Calculer_Distance;
+package bibliotheque;
 
-public class Circle extends Polygon{
+public class Circle extends Polygon {
     private double radius;
     private Point orgin;
 

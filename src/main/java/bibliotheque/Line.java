@@ -1,4 +1,4 @@
-package Calculer_Distance;
+package bibliotheque;
 
 public class Line {
 	private double a, b;

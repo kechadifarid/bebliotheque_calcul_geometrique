@@ -1,4 +1,4 @@
-package Calculer_Distance;
+package bibliotheque;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -6,8 +6,7 @@ import java.util.List;
 class Polygon {
     // Liste des points du polygone
     private ArrayList<Point> points;
-    Distance distance = new Distance();
-
+    
     // Constructeur pour créer un polygone régulier avec un nombre de côtés
     public Polygon(int numberOfSides, double radius, Point center) {
         points = new ArrayList<Point>();
@@ -94,7 +93,7 @@ class Polygon {
         for (int i = 0; i < points.size(); i++) {
             Point current = points.get(i);
             Point next = points.get((i + 1) % points.size()); // Pour boucler au premier point
-            double dist = distance.distancePointToSegment(p, current, next);
+            double dist = Calcul.distancePointToSegment(p, current, next);
             // Vérifier si le point est sur le segment
             if (isPointOnSegment(p, current, next)) {
                 return 0.0; // La distance est zéro si le point est sur le segment

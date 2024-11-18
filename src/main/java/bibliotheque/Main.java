@@ -1,6 +1,6 @@
-package Calculer_Distance;
+package bibliotheque;
 
-public class Test {
+public class Main {
 
 	public static void main(String[] args) {
 		{
@@ -98,7 +98,7 @@ public class Test {
 			polygon00.addPoint(new Point(9, 10));
 			polygon00.addPoint(new Point(11, 12));
 			// Utilisation de la classe PolygonDistanceCalculator pour calculer la distance minimale
-			double distanc = PolygonDistanceCalculator.calculateMinDistance(polygon0, polygon00);
+			double distanc = Calcul.calculateMinDistance(polygon0, polygon00);
 			System.out.println("La distance minimale entre les deux polygones est : " + distanc);
 			// Créer le premier polygone (triangle)
 			Polygon polygon1 = new Polygon();
@@ -112,19 +112,19 @@ public class Test {
 			polygon2.addPoint(new Point(6, 4));
 			polygon2.addPoint(new Point(4, 4));
 			// Calculer la distance minimale entre les deux polygones
-			double minDistance = PolygonDistanceCalculator.calculateMinDistance(polygon1, polygon2);
+			double minDistance = Calcul.calculateMinDistance(polygon1, polygon2);
 			// Afficher le résultat
 			if (minDistance == 0) {
 				System.out.println("Les deux polygones se chevauchent.");
 			} else {
 				System.out.println("La distance minimale entre les deux polygones est : " + minDistance);
 			}
-			// Test supplémentaire : Deux polygones qui se chevauchent
+			// Main supplémentaire : Deux polygones qui se chevauchent
 			Polygon polygon3 = new Polygon();
 			polygon3.addPoint(new Point(1, 1));
 			polygon3.addPoint(new Point(3, 1));
 			polygon3.addPoint(new Point(2, 2));
-			double overlapDistance = PolygonDistanceCalculator.calculateMinDistance(polygon1, polygon3);
+			double overlapDistance = Calcul.calculateMinDistance(polygon1, polygon3);
 			if (overlapDistance == 0) {
 				System.out.println("Les polygones 1 et 3 se chevauchent.");
 			} else {

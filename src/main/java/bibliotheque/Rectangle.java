@@ -1,4 +1,4 @@
-package Calculer_Distance;
+package bibliotheque;
 
 public class Rectangle extends Polygon {
     private double lenght;
