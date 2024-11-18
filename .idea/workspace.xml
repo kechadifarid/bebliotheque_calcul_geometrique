@@ -5,22 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ba13390a-3477-4eef-9230-061ae1d3c29e" name="Changes" comment="The big merge">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/src.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.github/workflows/documentation.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Calcul.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bibliotheque/Calcul.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Circle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bibliotheque/Circle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Distance.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Line.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bibliotheque/Line.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NoCoordException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bibliotheque/NoCoordException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Point.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bibliotheque/Point.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Polygon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bibliotheque/Polygon.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PolygonDistanceCalculator.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rectangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bibliotheque/Rectangle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Segment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bibliotheque/Segment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Square.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bibliotheque/Square.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bibliotheque/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bebliotheque_calcul_geometrique.iml" beforeDir="false" afterPath="$PROJECT_DIR$/bebliotheque_calcul_geometrique.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,7 +27,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="wajdi" />
+        <entry key="$PROJECT_DIR$" value="Master_DontPush" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -52,7 +42,7 @@
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/kechadifarid/bebliotheque_calcul_geometrique.git&quot;,
-    &quot;accountId&quot;: &quot;79b56b48-e2e4-4406-ad99-3d87e756da12&quot;
+    &quot;accountId&quot;: &quot;efde6df2-69a3-4961-95b9-6047bd225ae3&quot;
   }
 }</component>
   <component name="ProjectColorInfo">{
@@ -64,18 +54,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Main.executor": "Run",
-    "Application.Test.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "Master__DontPush",
-    "kotlin-language-version-configured": "true",
-    "onboarding.tips.debug.path": "/home/nas-wks01/users/uapv2307940/IdeaProjects/bebliotheque_calcul_geometrique/src/src/Main.java"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Test.executor&quot;: &quot;Run&quot;,
+    &quot;Maven.Unknown [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.Unknown [install].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Documentation&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;/home/nas-wks01/users/uapv2307940/IdeaProjects/bebliotheque_calcul_geometrique/src/src/Main.java&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/.github" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="bibliotheque" />
     </key>
