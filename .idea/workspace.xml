@@ -4,13 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ba13390a-3477-4eef-9230-061ae1d3c29e" name="Changes" comment="The big merge">
-      <change afterPath="$PROJECT_DIR$/.github/workflows/documentation.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bebliotheque_calcul_geometrique.iml" beforeDir="false" afterPath="$PROJECT_DIR$/bebliotheque_calcul_geometrique.iml" afterDir="false" />
+    <list default="true" id="ba13390a-3477-4eef-9230-061ae1d3c29e" name="Changes" comment="documentation">
+      <change beforePath="$PROJECT_DIR$/.github/workflows/documentation.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/documentation.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -132,7 +127,15 @@
       <option name="project" value="LOCAL" />
       <updated>1729529224822</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="documentation">
+      <option name="closed" value="true" />
+      <created>1731944373148</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1731944373148</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -151,7 +154,8 @@
     <MESSAGE value="distance entre cercle et polygone" />
     <MESSAGE value="Bon bon bon" />
     <MESSAGE value="The big merge" />
-    <option name="LAST_COMMIT_MESSAGE" value="The big merge" />
+    <MESSAGE value="documentation" />
+    <option name="LAST_COMMIT_MESSAGE" value="documentation" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
