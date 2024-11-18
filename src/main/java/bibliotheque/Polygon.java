@@ -103,7 +103,7 @@ class Polygon {
         return minDistance;
     }
     // Méthode pour vérifier si un point est sur un segment
-    private boolean isPointOnSegment(Point p, Point a, Point b) {
+    public boolean isPointOnSegment(Point p, Point a, Point b) {
         double crossProduct = (p.getY() - a.getY()) * (b.getX() - a.getX()) - (p.getX() - a.getX()) * (b.getY() - a.getY());
         if (Math.abs(crossProduct) > 1e-10) return false; // Vérification de la colinéarité
         double dotProduct = (p.getX() - a.getX()) * (b.getX() - a.getX()) + (p.getY() - a.getY()) * (b.getY() - a.getY());
