@@ -4,24 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ba13390a-3477-4eef-9230-061ae1d3c29e" name="Changes" comment="The big merge">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/src.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Calcul.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bibliotheque/Calcul.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Circle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bibliotheque/Circle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Distance.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Line.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bibliotheque/Line.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NoCoordException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bibliotheque/NoCoordException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Point.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bibliotheque/Point.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Polygon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bibliotheque/Polygon.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PolygonDistanceCalculator.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rectangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bibliotheque/Rectangle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Segment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bibliotheque/Segment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Square.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bibliotheque/Square.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bibliotheque/Main.java" afterDir="false" />
-    </list>
+    <list default="true" id="ba13390a-3477-4eef-9230-061ae1d3c29e" name="Changes" comment="The big merge" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -64,17 +47,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Main.executor": "Run",
-    "Application.Test.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "Master__DontPush",
-    "kotlin-language-version-configured": "true",
-    "onboarding.tips.debug.path": "/home/nas-wks01/users/uapv2307940/IdeaProjects/bebliotheque_calcul_geometrique/src/src/Main.java"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Test.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Master__DontPush&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;/home/nas-wks01/users/uapv2307940/IdeaProjects/bebliotheque_calcul_geometrique/src/src/Main.java&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="bibliotheque" />
@@ -99,6 +82,14 @@
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.17890.1" />
+        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-IU-241.17890.1" />
+      </set>
+    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -135,6 +126,9 @@
     </task>
     <option name="localTasksCounter" value="4" />
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
