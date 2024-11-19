@@ -59,45 +59,55 @@ public class Calcul {
 	 * @return The shortest distance between the circle and the point. (from the CIRCLE, not from its center)
 	 */
 	public static double distanceFromPointToCercle(Point p, Circle c) {
-		double distance;
-		if (c.getRadius() <= Calcul.distanceFromPointToPoint(p, c.getOrgin())) {
-			distance = Calcul.distanceFromPointToPoint(p, c.getOrgin()) - c.getRadius();
-			return distance;
-		} else
-			return Calcul.distanceFromPointToPoint(p, c.getOrgin());
-
-	}
-
-	 /**
-     * Calculates the shortest distance from a point to a line segment.
-     *
-     * @param p     The point from which the distance is calculated.
-     * @param start The starting point of the segment.
-     * @param end   The ending point of the segment.
-     * @return The shortest distance from the point to the segment.
-     */
-	public static double distanceFromPointToSegment(Point p, Point start, Point end) {
-		double ABx = end.getX() - start.getX();
-		double ABy = end.getY() - start.getY();
-		double APx = p.getX() - start.getX();
-		double APy = p.getY() - start.getY();
-
-		double produitScalaire = APx * ABx + APy * ABy;
-		double longueurABCarre = ABx * ABx + ABy * ABy;
-
-		double t = produitScalaire / longueurABCarre;
-
-		if (t < 0) {
-			return distanceFromPointToPoint(p, start);
-		} else if (t > 1) {
-			return distanceFromPointToPoint(p, end);
+		double distanceToCenter = Calcul.distanceFromPointToPoint(p, c.getOrgin());
+		if (distanceToCenter <= c.getRadius()) {
+			return c.getRadius() - distanceToCenter; // Distance à l'intérieur
 		} else {
-			double x_proj = start.getX() + t * ABx;
-			double y_proj = start.getY() + t * ABy;
-			return distanceFromPointToPoint(p, new Point(x_proj, y_proj));
+			return distanceToCenter - c.getRadius(); // Distance à l'extérieur
 		}
 	}
-	  /**
+
+
+
+	public static double distanceFromPointToSegment(Point p, Point a, Point b) {
+		double abX = b.getX() - a.getX();
+		double abY = b.getY() - a.getY();
+		double apX = p.getX() - a.getX();
+		double apY = p.getY() - a.getY();
+
+		double abSquared = abX * abX + abY * abY;
+
+		// Si le segment est un point unique
+		if (abSquared == 0) {
+			return Math.sqrt(apX * apX + apY * apY);
+		}
+
+		// Calcul de la projection scalaire
+		double t = ((apX * abX + apY * abY) / abSquared) + ((apX * abX + apY * abY) % abSquared);
+ //System.out.println("t est " +  abSquared);
+		if (t < 0) {
+			// Distance au point A
+			return Math.sqrt(apX * apX + apY * apY);
+		} else if (t > 1) {
+			// Distance au point B
+			double bpX = p.getX() - b.getX();
+			double bpY = p.getY() - b.getY();
+			return Math.sqrt(bpX * bpX + bpY * bpY);
+		} else {
+			// Si le point est sur le segment, la distance est la distance entre le point P et le segment.
+			double projX = a.getX() + t * abX;
+			double projY = a.getY() + t * abY;
+			double dx = p.getX() - projX;
+			double dy = p.getY() - projY;
+			return 0;
+		}
+	}
+
+
+
+
+
+	/**
      * Calculates the shortest distance from a point to a square.
      * This method calculates the distance between the point and each side of the square,
      * then returns the smallest distance.
