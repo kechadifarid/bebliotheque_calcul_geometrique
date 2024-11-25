@@ -69,6 +69,11 @@ public class Square extends Polygon{
 
         D = new Point(x2, C.getY());
 
+        super.addPoint(A);
+        super.addPoint(B);
+        super.addPoint(C);
+        super.addPoint(D);
+
         //affichage de point
         System.out.println("Point A : ("+A.getX()+","+A.getY()+") \n"
                 +"Point B : ("+B.getX()+","+B.getY()+") \n"+

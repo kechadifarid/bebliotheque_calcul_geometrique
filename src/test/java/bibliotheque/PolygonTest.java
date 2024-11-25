@@ -96,4 +96,25 @@ class PolygonTest {
         assertFalse(polygon.isPointOnSegment(pointOffSegment, new Point(0, 0), new Point(4, 0)),
                 "Le point ne doit pas être sur le segment.");
     }
+
+    @Test
+    void testSquareToRenctangle()
+    {
+
+        // Carré centré à (0,0) avec côté 2
+        Square square = new Square(new Point(0, 0), 2);
+
+        // Triangle pour chaque exemple
+        Triangle triangle1 = new Triangle(new Point(3, 0), new Point(4, 1), new Point(4, -1)); // Exemple 1
+        Triangle triangle2 = new Triangle(new Point(0, 0), new Point(2, 0), new Point(1, 2));  // Exemple 2
+        Triangle triangle3 = new Triangle(new Point(2, 3), new Point(4, 3), new Point(3, 5));  // Exemple 3
+
+        // Test distance entre carré et triangle 1
+        System.out.println("Distance min (Square - Triangle1) : " + Calcul.calculateMinDistance(square, triangle1));
+        // Test distance entre carré et triangle 2
+        System.out.println("Distance min (Square - Triangle2) : " + Calcul.calculateMinDistance(square, triangle2));
+        // Test distance entre carré et triangle 3
+        System.out.println("Distance min (Square - Triangle3) : " + Calcul.calculateMinDistance(square, triangle3));
+
+    }
 }

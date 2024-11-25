@@ -15,6 +15,15 @@ class Triangle extends Polygon {
      */
     public Triangle(Point p1, Point p2, Point p3) {
         super(); // Appelle le constructeur par défaut de Polygon
+
+        /*
+        //affichage de point
+        System.out.println("Point p1 : ("+p1.getX()+","+p1.getY()+") \n"
+                +"Point p2 : ("+p2.getX()+","+p2.getY()+") \n"+
+                "Point p3 : ("+p3.getX()+","+p3.getY()+") \n"
+        );
+        */
+
         addPoint(p1);
         addPoint(p2);
         addPoint(p3);

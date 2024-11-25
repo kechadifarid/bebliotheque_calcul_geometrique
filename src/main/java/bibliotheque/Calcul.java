@@ -9,7 +9,7 @@ public class Calcul {
 	 * Calculates the shortest distance from a point to a line segment.
 	 *
 	 * @param p1     The point from which the distance is calculated.
-	 * @param p2   The ending point from which the distance is calculated.
+	 * @param p2   The ending  point from which the distance is calculated.
 	 * @return The distance between the two points
 	 */
 	public static double distanceFromPointToPoint(Point p1, Point p2) {
@@ -273,36 +273,19 @@ public class Calcul {
 
 	// Méthode pour calculer la distance minimale entre deux polygones
 	public static double calculateMinDistance(Polygon polygon1, Polygon polygon2) {
-		double minDistance = Double.MAX_VALUE;  // On initialise la distance minimale à un maximum possible
 
-		// Vérifier si l'un des polygones contient un point de l'autre
-		for (Point p1 : polygon1.getPoints()) {
-			if (polygon2.isPointInside(p1)) {
-				return 0;  // Les polygones se chevauchent
-			}
-		}
+		double minDistance = Double.MAX_VALUE;
+		ArrayList<Point> arrayPoints1 = polygon1.getPoints();
+		ArrayList<Point> arrayPoints2 = polygon2.getPoints();
 
-		for (Point p2 : polygon2.getPoints()) {
-			if (polygon1.isPointInside(p2)) {
-				return 0;  // Les polygones se chevauchent
-			}
-		}
-
-		// Si les polygones ne se chevauchent pas, calculer la distance minimale
-		for (Point p1 : polygon1.getPoints()) {
-			for (Point p2 : polygon2.getPoints()) {
-				// Calculer la distance entre les deux points à l'aide de la classe Calcul
-				double distance = Calcul.distanceFromPointToPoint(p1, p2);
-				// Si la distance est plus petite que la distance minimale actuelle, on la met à jour
-				if (distance < minDistance) {
-					minDistance = distance;
-				}
+		for (Point point1 : arrayPoints1) {
+			for (Point point2 : arrayPoints2) {
+				minDistance = Math.min(minDistance, Calcul.distanceFromPointToPoint(point1, point2));
 			}
 		}
 
 		return minDistance;
 	}
-
 
 
 }
