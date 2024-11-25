@@ -3,7 +3,7 @@ package bibliotheque;
 import java.util.ArrayList;
 import java.util.List;
 
-class Polygon {
+public class Polygon {
     // Liste des points du polygone
     private ArrayList<Point> points;
     

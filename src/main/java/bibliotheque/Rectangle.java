@@ -82,9 +82,6 @@ public class Rectangle extends Polygon {
         Segment s2 = new Segment(upper_left,bottom_left);
         Segment s3 = new Segment(bottom_left,bottom_right);
         Segment s4 = new Segment(upper_right,bottom_right);
-
-
-
     }
 
     public void setX(double x) {
