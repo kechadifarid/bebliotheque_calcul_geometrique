@@ -1,4 +1,5 @@
 package bibliotheque;
+import bibliotheque.*;
 
 public class Main {
 
