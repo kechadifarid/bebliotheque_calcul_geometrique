@@ -1,7 +1,7 @@
 package bibliotheque;
 
 public class Rectangle extends Polygon {
-    private double lenght;
+    private double length;
     private double width;
 
     public Point getUpper_left() {
@@ -44,7 +44,16 @@ public class Rectangle extends Polygon {
     private double x;
     private double y;
 
+    public Rectangle(double length, double width, Point origin) {
+        this.length = length;
+        this.width = width;
+        this.upper_left = origin;
 
+        // Calcul des autres coins du rectangle
+        this.upper_right = new Point(origin.getX() + length, origin.getY());
+        this.bottom_left = new Point(origin.getX(), origin.getY() - width);
+        this.bottom_right = new Point(origin.getX() + length, origin.getY() - width);
+    }
     public Rectangle(){
         this.upper_right = new Point();
         this.bottom_right = new Point();
@@ -52,8 +61,8 @@ public class Rectangle extends Polygon {
         this.bottom_left = new Point();
     }
 
-    public double getLenght() {
-        return lenght;
+    public double getLength() {
+        return length;
     }
 
     public double getWidth() {
@@ -69,7 +78,7 @@ public class Rectangle extends Polygon {
     }
 
     public void setData(double lenght, double width) throws NoCoordException {
-        this.lenght = lenght;
+        this.length = lenght;
         this.width = width;
         if(getX()==0 || getY()==0)  throw new NoCoordException("Renseignez les coordonnées");
         upper_right.setX(getX()+lenght);
