@@ -69,39 +69,43 @@ public class Calcul {
 
 
 
-	public static double distanceFromPointToSegment(Point p, Point a, Point b) {
-		double abX = b.getX() - a.getX();
-		double abY = b.getY() - a.getY();
-		double apX = p.getX() - a.getX();
-		double apY = p.getY() - a.getY();
+	public static double distanceFromPointToSegment(Point var0, Point var1, Point var2) {
+    double dx = var2.getX() - var1.getX();
+    double dy = var2.getY() - var1.getY();
+    double px = var0.getX() - var1.getX();
+    double py = var0.getY() - var1.getY();
 
-		double abSquared = abX * abX + abY * abY;
+    // Calcul du produit scalaire et de la longueur du segment
+    double segmentLengthSquared = dx * dx + dy * dy;
+    
+    if (segmentLengthSquared == 0.0) {
+        // Si les deux points du segment sont identiques, retourner la distance directe
+        return Math.sqrt(px * px + py * py);
+    }
 
-		// Si le segment est un point unique
-		if (abSquared == 0) {
-			return Math.sqrt(apX * apX + apY * apY);
-		}
+    // Calcul de la projection du point sur le segment (t est la distance normalisée)
+    double t = (px * dx + py * dy) / segmentLengthSquared;
 
-		// Calcul de la projection scalaire
-		double t = ((apX * abX + apY * abY) / abSquared) + ((apX * abX + apY * abY) % abSquared);
- //System.out.println("t est " +  abSquared);
-		if (t < 0) {
-			// Distance au point A
-			return Math.sqrt(apX * apX + apY * apY);
-		} else if (t > 1) {
-			// Distance au point B
-			double bpX = p.getX() - b.getX();
-			double bpY = p.getY() - b.getY();
-			return Math.sqrt(bpX * bpX + bpY * bpY);
-		} else {
-			// Si le point est sur le segment, la distance est la distance entre le point P et le segment.
-			double projX = a.getX() + t * abX;
-			double projY = a.getY() + t * abY;
-			double dx = p.getX() - projX;
-			double dy = p.getY() - projY;
-			return 0;
-		}
-	}
+    // Si la projection est avant le premier point du segment, utiliser le premier point
+    if (t < 0) {
+        return Math.sqrt(px * px + py * py);
+    }
+    // Si la projection est après le deuxième point du segment, utiliser le deuxième point
+    if (t > 1) {
+        double dx2 = var0.getX() - var2.getX();
+        double dy2 = var0.getY() - var2.getY();
+        return Math.sqrt(dx2 * dx2 + dy2 * dy2);
+    }
+
+    // Si la projection est sur le segment, calculer la distance entre le point et la projection
+    double closestX = var1.getX() + t * dx;
+    double closestY = var1.getY() + t * dy;
+    double dxClosest = var0.getX() - closestX;
+    double dyClosest = var0.getY() - closestY;
+    
+    return Math.sqrt(dxClosest * dxClosest + dyClosest * dyClosest);
+}
+
 
 
 
