@@ -68,3 +68,5 @@ Avant de créer le fichier **JAR**, vous devez compiler les fichiers sources Jav
 
 ```bash
 javac -d bin -sourcepath src main/java/bibliotheque/*.java
+jar cf lib/bibliotheque.jar -C bin 
+
