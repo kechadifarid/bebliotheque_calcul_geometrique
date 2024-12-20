@@ -51,7 +51,7 @@ class CalculTest {
         Point p = new Point(2, 2);
         Point start = new Point(0, 0);
         Point end = new Point(4, 4);
-        double result = Calcul.distanceFromPointToSegment(p, start, end);
+        double result = Calcul.distancePointToSegment(p, start, end);
         //assertEquals(0.0, result, 1e-9, "La distance doit être 0 si le point est sur le segment.");
     }
 
@@ -62,10 +62,9 @@ class CalculTest {
         Point a = new Point(0, 0);
         Point b = new Point(0, 2);
 
-        double expectedDistance = Math.sqrt(2); // 1.4142135623730951
-        double actualDistance = Calcul.distanceFromPointToSegment(p, a, b);
+        double actualDistance = Calcul.distancePointToSegment(p, a, b);
 
-        Assertions.assertEquals(expectedDistance, actualDistance, "La distance doit être correcte si le point est en dehors du segment.");
+        Assertions.assertEquals(1, actualDistance, "La distance doit être correcte si le point est en dehors du segment.");
     }
 
 
@@ -75,7 +74,7 @@ class CalculTest {
         Point p = new Point(-1, -1);
         Point start = new Point(0, 0);
         Point end = new Point(4, 4);
-        double result = Calcul.distanceFromPointToSegment(p, start, end);
+        double result = Calcul.distancePointToSegment(p, start, end);
         assertEquals(Math.sqrt(2), result, 1e-9, "La distance doit être correcte pour le point le plus proche de l'extrémité start.");
     }
 
@@ -84,7 +83,7 @@ class CalculTest {
         Point p = new Point(5, 5);
         Point start = new Point(0, 0);
         Point end = new Point(4, 4);
-        double result = Calcul.distanceFromPointToSegment(p, start, end);
-        assertEquals(Math.sqrt(2), result, 1e-9, "La distance doit être correcte pour le point le plus proche de l'extrémité end.");
+        double result = Calcul.distancePointToSegment(p, start, end);
+        assertEquals(Math.sqrt(2), result,"La distance doit être correcte pour le point le plus proche de l'extrémité end.");
     }
 }

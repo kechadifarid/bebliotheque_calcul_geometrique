@@ -3,6 +3,7 @@ package bibliotheque;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
+import java.util.Random;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -115,6 +116,39 @@ class PolygonTest {
         System.out.println("Distance min (Square - Triangle2) : " + Calcul.calculateMinDistance(square, triangle2));
         // Test distance entre carré et triangle 3
         System.out.println("Distance min (Square - Triangle3) : " + Calcul.calculateMinDistance(square, triangle3));
+
+    }
+
+    @Test
+    void distancePolygonCircle() {
+
+        Polygon polygon = new Polygon();
+        polygon.addPoint(new Point(0, 0));
+        polygon.addPoint(new Point(4, 0));
+        polygon.addPoint(new Point(4, 4));
+        polygon.addPoint(new Point(0, 4));
+        Point insidePoint = new Point(6,6 );
+        Circle circle = new Circle(1,insidePoint);
+        assertEquals(1.8, Calcul.distancePolygonCircle(polygon,circle), 1e-1, "La distance doit être égale à 1 unité.");
+    }
+
+    @Test
+    void testCalcul(){
+        Point p = new Point(0, 0);
+
+        Rectangle rectangle = new Rectangle(8,4,p);
+        Random random = new Random();
+        double x1= rectangle.getBottom_left().getX()+ random.nextDouble()*rectangle.getWidth();
+        double x2= rectangle.getBottom_left().getX()+ random.nextDouble()*rectangle.getWidth();
+        double y1 =rectangle.getBottom_left().getY() + random.nextDouble()* rectangle.getLength();
+        double y2 =rectangle.getBottom_left().getY() + random.nextDouble()* rectangle.getLength();
+        Point a = new Point(2,-1);
+        Point b = new Point(4,-2);
+        Point d =new Point(2,-1);
+        assertEquals(3.75,Probabilité.findIntersectionWithPerpendicularBisector(a,b,Probabilité.findClosestSide(a,rectangle)).getX());
+        assertEquals(0,Probabilité.findIntersectionWithPerpendicularBisector(a,b,Probabilité.findClosestSide(a,rectangle)).getY());
+
+
 
     }
 }

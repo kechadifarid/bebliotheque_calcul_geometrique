@@ -5,8 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ba13390a-3477-4eef-9230-061ae1d3c29e" name="Changes" comment="v">
+      <change afterPath="$PROJECT_DIR$/src/main/java/bibliotheque/Probabilité.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bibliotheque/Calcul.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bibliotheque/Calcul.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/bibliotheque/CalculTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/bibliotheque/CalculTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/bibliotheque/PolygonTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/bibliotheque/PolygonTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,8 +20,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="JUnit5 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -36,12 +40,12 @@
     &quot;assignee&quot;: &quot;rouabhiamohamed&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/kechadifarid/bebliotheque_calcul_geometrique&quot;,
-    &quot;accountId&quot;: &quot;5f953f8f-573a-4046-b0f3-b4c233966558&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/kechadifarid/bebliotheque_calcul_geometrique.git",
+    "accountId": "4fb0d163-5d63-4676-bc09-35f2d39810a8"
   }
-}</component>
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 0
 }</component>
@@ -51,26 +55,36 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Test.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.PolygonTest.essai.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;Master__DontPush&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;onboarding.tips.debug.path&quot;: &quot;/home/nas-wks01/users/uapv2307940/IdeaProjects/bebliotheque_calcul_geometrique/src/src/Main.java&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Main.executor": "Run",
+    "Application.Test.executor": "Run",
+    "JUnit.CalculTest.executor": "Run",
+    "JUnit.CalculTest.testDistanceFromPointToSegment_PointClosestToEnd.executor": "Run",
+    "JUnit.CalculTest.testDistanceFromPointToSegment_PointClosestToStart.executor": "Run",
+    "JUnit.CalculTest.testDistanceFromPointToSegment_PointOnSegment.executor": "Run",
+    "JUnit.CalculTest.testDistanceFromPointToSegment_PointOutsideSegment.executor": "Run",
+    "JUnit.PolygonTest.distancePolygonCircle.executor": "Run",
+    "JUnit.PolygonTest.essai.executor": "Run",
+    "JUnit.PolygonTest.executor": "Run",
+    "JUnit.PolygonTest.testCalcul.executor": "Run",
+    "JUnit.PolygonTest.testDistanceToPolygon_OutsidePoint.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "git-widget-placeholder": "Master__DontPush",
+    "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "onboarding.tips.debug.path": "/home/nas-wks01/users/uapv2307940/IdeaProjects/bebliotheque_calcul_geometrique/src/src/Main.java",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -82,16 +96,18 @@
       <recent name="bibliotheque" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.PolygonTest">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="bibliotheque.Main" />
-      <module name="src" />
+  <component name="RunManager" selected="JUnit.PolygonTest.testCalcul">
+    <configuration name="CalculTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="test-unitaires" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="bibliotheque.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="bibliotheque" />
+      <option name="MAIN_CLASS_NAME" value="bibliotheque.CalculTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -111,7 +127,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PolygonTest.essai" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PolygonTest.distancePolygonCircle" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="test-unitaires" />
       <extension name="coverage">
         <pattern>
@@ -121,13 +137,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="bibliotheque" />
       <option name="MAIN_CLASS_NAME" value="bibliotheque.PolygonTest" />
-      <option name="METHOD_NAME" value="essai" />
+      <option name="METHOD_NAME" value="distancePolygonCircle" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PolygonTest.testPolygonWithNumberOfSides" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PolygonTest.testCalcul" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="test-unitaires" />
       <extension name="coverage">
         <pattern>
@@ -137,7 +153,23 @@
       </extension>
       <option name="PACKAGE_NAME" value="bibliotheque" />
       <option name="MAIN_CLASS_NAME" value="bibliotheque.PolygonTest" />
-      <option name="METHOD_NAME" value="testPolygonWithNumberOfSides" />
+      <option name="METHOD_NAME" value="testCalcul" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PolygonTest.testDistanceToPolygon_OutsidePoint" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="test-unitaires" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="bibliotheque.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="bibliotheque" />
+      <option name="MAIN_CLASS_NAME" value="bibliotheque.PolygonTest" />
+      <option name="METHOD_NAME" value="testDistanceToPolygon_OutsidePoint" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -145,18 +177,19 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.PolygonTest.testCalcul" />
         <item itemvalue="JUnit.PolygonTest" />
-        <item itemvalue="JUnit.PolygonTest.testPolygonWithNumberOfSides" />
-        <item itemvalue="JUnit.PolygonTest.essai" />
-        <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.PolygonTest.distancePolygonCircle" />
+        <item itemvalue="JUnit.CalculTest" />
+        <item itemvalue="JUnit.PolygonTest.testDistanceToPolygon_OutsidePoint" />
       </list>
     </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.17890.1" />
-        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-IU-241.17890.1" />
+        <option value="bundled-jdk-9823dce3aa75-fdfe4dae3a2d-intellij.indexing.shared.core-IU-243.22562.145" />
+        <option value="bundled-js-predefined-d6986cc7102b-deb605915726-JavaScript-IU-243.22562.145" />
       </set>
     </attachedChunks>
   </component>
@@ -169,6 +202,7 @@
       <option name="presentableId" value="Default" />
       <updated>1727701109656</updated>
       <workItem from="1731942799805" duration="24000" />
+      <workItem from="1734697397844" duration="2387000" />
     </task>
     <task id="LOCAL-00001" summary="distance entre cercle et carre">
       <option name="closed" value="true" />
